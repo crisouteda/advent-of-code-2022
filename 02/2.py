@@ -1,3 +1,26 @@
+points = {'B': 2, 'A': 1, 'C': 3}
+resultPoints = {'Z': 6, 'Y': 3, 'X': 0}
+result = {'A':
+          {
+              'X': "C",
+              'Y': 'A',
+              'Z': 'B'
+          },
+          'B':
+          {
+              'X': "A",
+              'Y': 'B',
+              'Z': 'C'
+          },
+          'C':
+          {
+              'X': "B",
+              'Y': 'C',
+              'Z': 'A'
+          }
+          }
+
+
 def findTotalPoints():
     totalPoints = 0
     with open('./input.txt') as f:
@@ -8,27 +31,6 @@ def findTotalPoints():
 
 
 def findResultPerRound(o, r):
-    points = {'B': 2, 'A': 1, 'C': 3}
-    resultPoints = {'Z': 6, 'Y': 3, 'X': 0}
-    result = {'A':
-              {
-                  'X': "C",
-                  'Y': 'A',
-                  'Z': 'B'
-              },
-              'B':
-              {
-                  'X': "A",
-                  'Y': 'B',
-                  'Z': 'C'
-              },
-              'C':
-              {
-                  'X': "B",
-                  'Y': 'C',
-                  'Z': 'A'
-              }
-              }
     roundPoints = resultPoints[r]
     roundPoints += points[result[o][r]]
     return roundPoints
