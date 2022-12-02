@@ -25,9 +25,9 @@ def findTotalPoints():
     totalPoints = 0
     with open('./input.txt') as f:
         lines = f.readlines()
-        for line in lines:
-            totalPoints += findResultPerRound(line[0], line[2])
-        return totalPoints
+    for line in lines:
+        totalPoints += findResultPerRound(line[0], line[2])
+    return totalPoints
 
 
 def findResultPerRound(o, m):
